@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz./thymeleaf/layout" layout:decorator="MainLayout">
+	<section layout:fragment="content">
+		<div class="panel panel-default" style="margin: 10px">
+			<div class="panel-heading">
+				<h1 class="panel-title">Register</h1>
+			</div>
+			<div class="panel-body">
+				<form class="form-inline" method="POST" th:object="${user}" style="margin: 20px 0" th:action="@{/register}">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Name" th:field="*{name}"/>
+						<input type="text" class="form-control" placeholder="Email" th:field="*{email}"/>
+						<button type="submit" class="btn btn-primary">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+</html>
